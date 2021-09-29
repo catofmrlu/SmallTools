@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\copypath]
+
+ @="copy dir path"
+
+[HKEY_CLASSES_ROOT\Directory\shell\copypath\command] 
+
+@="mshta vbscript:clipboarddata.setdata(\"text\",\"%1\")(close)"
+
+[HKEY_CLASSES_ROOT\*\shell\copypath] 
+
+@="copy file path"
+
+[HKEY_CLASSES_ROOT\*\shell\copypath\command] 
+
+@="mshta vbscript:clipboarddata.setdata(\"text\",\"%1\")(close)"
